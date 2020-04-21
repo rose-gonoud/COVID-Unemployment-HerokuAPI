@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 # Database Setup
-engine = create_engine("sqlite:///../assets/data/Project2.db")
+engine = create_engine("sqlite:///Project2.db")
 
 Base = automap_base()
 
