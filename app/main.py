@@ -15,6 +15,8 @@ Base.prepare(engine, reflect=True)
 
 # Save reference to the unemployment table
 unemployment = Base.classes.unemploymentData
+# save reference to county unemployment data
+county_unemployment = Base.classes.countyUnemploymentData
 
 # Flask Setup
 app = Flask(__name__)
@@ -112,8 +114,6 @@ def unemploymentData():
     return jsonify(data)
 
 # --------------------------------------------------------------------------------------------------------------------------
-# save reference to county unemployment data
-county_unemployment = Base.classes.countyUnemploymentData
 
 @app.route("/countyUnemploymentEstimates")
 def countyUnemploymentData():
