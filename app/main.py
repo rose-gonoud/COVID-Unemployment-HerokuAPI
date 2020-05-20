@@ -7,6 +7,9 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 # Database Setup
+# note that there are two copies of Project2.db
+#   to run locally, database must be in same dir as main.py
+#   to run on Heroku, database is read from root dir
 engine = create_engine("sqlite:///Project2.db")
 
 Base = automap_base()
@@ -15,7 +18,6 @@ Base.prepare(engine, reflect=True)
 
 # Save reference to the unemployment table
 unemployment = Base.classes.unemploymentData
-print(dir(Base.classes))
 # save reference to county unemployment data
 county_unemployment = Base.classes.countyUnemploymentData
 
