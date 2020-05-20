@@ -15,6 +15,7 @@ Base.prepare(engine, reflect=True)
 
 # Save reference to the unemployment table
 unemployment = Base.classes.unemploymentData
+print(dir(Base.classes))
 # save reference to county unemployment data
 county_unemployment = Base.classes.countyUnemploymentData
 
