@@ -9,7 +9,7 @@ from flask_cors import CORS
 # Database Setup
 # note that there are two copies of Project2.db
 #   to run locally, database must be in same dir as main.py
-#   to run on Heroku, database is read from root dir
+#   to run on Heroku, database must be in root dir
 engine = create_engine("sqlite:///Project2.db")
 
 Base = automap_base()
